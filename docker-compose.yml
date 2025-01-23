@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  event-service:
+    build: ./event-service
+    ports:
+      - "3001:3000"
+    env_file:
+      - ./event-service/.env
+  booking-service:
+    build: ./booking-service
+    ports:
+      - "3002:3000"
+    env_file:
+      - ./booking-service/.env
+  user-service:
+    build: ./user-service
+    ports:
+      - "3003:3000"
+    env_file:
+      - ./user-service/.env
+  notification-service:
+    build: ./notification-service
+    ports:
+      - "3004:3000"
+    env_file:
+      - ./notification-service/.env
